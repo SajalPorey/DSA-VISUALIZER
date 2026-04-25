@@ -47,26 +47,40 @@
         padding: 25px;
         border: 1px solid rgba(0, 234, 255, 0.2);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-        margin-bottom: 30px;
-        display: inline-block;
-        min-width: 400px;
+        margin: 0 auto 30px;
+        display: block;
+        width: min(100%, 760px);
         text-align: center;
     }
 
-    select, button {
+    select, button, input, textarea {
         padding: 12px 20px;
         margin: 5px;
         border-radius: 12px;
         font-size: 16px;
         transition: all 0.3s ease;
-        cursor: pointer;
+        font-family: inherit;
     }
 
-    select {
+    select, input, textarea {
         background: rgba(15, 15, 26, 0.8);
         color: white;
         border: 2px solid var(--accent);
+    }
+
+    select {
         min-width: 250px;
+    }
+
+    input {
+        min-width: 220px;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 160px;
+        resize: vertical;
+        line-height: 1.5;
     }
 
     button {
@@ -75,6 +89,7 @@
         border: none;
         font-weight: bold;
         box-shadow: 0 4px 15px rgba(0, 234, 255, 0.4);
+        cursor: pointer;
     }
 
     button:hover {
@@ -210,6 +225,209 @@
         gap: 10px;
         margin-top: 30px;
     }
+
+    .field-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 12px;
+    }
+
+    .input-block {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 220px;
+        text-align: left;
+        flex: 1 1 220px;
+    }
+
+    label {
+        color: #b7c0d8;
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
+
+    .algo-panel {
+        margin-top: 30px;
+        padding: 24px;
+        background: rgba(6, 12, 24, 0.55);
+        border-radius: 22px;
+        border: 1px solid rgba(0, 234, 255, 0.16);
+    }
+
+    .algo-title {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(0, 234, 255, 0.12);
+        color: #dffaff;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    .note-box {
+        margin-top: 20px;
+        padding: 16px 18px;
+        background: rgba(255, 255, 255, 0.04);
+        border-left: 4px solid var(--accent);
+        border-radius: 16px;
+        color: #b7c0d8;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+        margin: 24px 0;
+    }
+
+    .stat-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(0, 234, 255, 0.12);
+        border-radius: 18px;
+        padding: 18px;
+        text-align: left;
+    }
+
+    .stat-label {
+        color: #94a3b8;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .stat-value {
+        color: #f8fbff;
+        font-size: 1.55rem;
+        font-weight: 700;
+        word-break: break-word;
+    }
+
+    .table-wrap {
+        margin-top: 24px;
+        overflow: auto;
+        border-radius: 18px;
+        border: 1px solid rgba(0, 234, 255, 0.16);
+        background: rgba(9, 14, 26, 0.72);
+    }
+
+    .dp-table {
+        width: 100%;
+        min-width: 580px;
+        border-collapse: collapse;
+    }
+
+    .dp-table th,
+    .dp-table td {
+        border: 1px solid rgba(0, 234, 255, 0.12);
+        padding: 12px;
+        text-align: center;
+    }
+
+    .dp-table th {
+        background: rgba(0, 234, 255, 0.1);
+        color: #dffaff;
+        font-weight: 700;
+    }
+
+    .trace-cell {
+        background: rgba(255, 0, 255, 0.16);
+        box-shadow: inset 0 0 0 2px rgba(255, 0, 255, 0.35);
+    }
+
+    .match-cell {
+        color: #00ff9d;
+        font-weight: 700;
+    }
+
+    .item-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 22px;
+    }
+
+    .item-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(0, 234, 255, 0.12);
+        border-radius: 18px;
+        padding: 18px;
+        text-align: left;
+    }
+
+    .item-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+
+    .item-card p {
+        margin: 6px 0;
+        color: #cbd5e1;
+        line-height: 1.5;
+    }
+
+    .take-full {
+        border-color: rgba(0, 255, 157, 0.38);
+        box-shadow: 0 0 24px rgba(0, 255, 157, 0.14);
+    }
+
+    .take-partial {
+        border-color: rgba(255, 0, 255, 0.36);
+        box-shadow: 0 0 24px rgba(255, 0, 255, 0.14);
+    }
+
+    .take-none {
+        opacity: 0.72;
+    }
+
+    .stack-labels {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 20px;
+        color: #8892b0;
+    }
+
+    .empty-state {
+        color: #64748b;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    @media (max-width: 640px) {
+        body { padding: 14px; }
+        h1 { font-size: 2.2rem; }
+        .controls { padding: 18px; }
+        .node {
+            min-width: 56px;
+            height: 56px;
+            font-size: 1.1rem;
+            margin: 10px;
+        }
+        .circle-node {
+            width: 56px;
+            height: 56px;
+            font-size: 1.1rem;
+        }
+        .circle-container {
+            width: 290px;
+            height: 290px;
+        }
+        .dp-table {
+            min-width: 480px;
+        }
+    }
 </style>
 </head>
 <body>
@@ -223,6 +441,7 @@
             <option value="linked">Linked List</option>
             <option value="stack">Stack</option>
             <option value="queue">Queue</option>
+            <option value="dp">Dynamic Programming</option>
         </select>
     </div>
 
@@ -235,10 +454,23 @@ let stack = [];
 let queue = [];
 let lastSearchedValue = null;
 
+function escapeHTML(value) {
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
+function formatNumber(value) {
+    return Number(value.toFixed(2)).toString();
+}
+
 function loadDS() {
     const ds = document.getElementById("dsSelect").value;
     document.getElementById("subOptions").innerHTML = "";
-    document.getElementById("container").innerHTML = "<p style='color:#8892b0; text-align:center; margin-top:100px;'>Select an option to begin...</p>";
+    document.getElementById("container").innerHTML = "<p class='empty-state'>Select an option to begin...</p>";
 
     if (ds === "linked") {
         document.getElementById("subOptions").innerHTML = `
@@ -260,6 +492,17 @@ function loadDS() {
                     <option value="">-- Select Queue Type --</option>
                     <option value="normal">Linear Queue</option>
                     <option value="circular">Circular Queue</option>
+                </select>
+            </div>
+        `;
+    }
+    else if (ds === "dp") {
+        document.getElementById("subOptions").innerHTML = `
+            <div class="controls">
+                <select id="dpType" onchange="initDP()">
+                    <option value="">-- Select Problem --</option>
+                    <option value="lcs">Longest Common Subsequence</option>
+                    <option value="fractional">Fractional Knapsack</option>
                 </select>
             </div>
         `;
@@ -366,6 +609,296 @@ function displayLL() {
 }
 
 
+
+function initDP() {
+    const type = document.getElementById("dpType").value;
+
+    if (!type) {
+        document.getElementById("container").innerHTML = "<p class='empty-state'>Choose an algorithm to begin.</p>";
+        return;
+    }
+
+    if (type === "lcs") {
+        initLCS();
+    } else if (type === "fractional") {
+        initFractionalKnapsack();
+    }
+}
+
+function initLCS() {
+    document.getElementById("container").innerHTML = `
+        <div class="controls">
+            <div class="field-row">
+                <div class="input-block">
+                    <label for="lcsFirst">First String</label>
+                    <input id="lcsFirst" type="text" value="AGGTAB" autocomplete="off">
+                </div>
+                <div class="input-block">
+                    <label for="lcsSecond">Second String</label>
+                    <input id="lcsSecond" type="text" value="GXTXAYB" autocomplete="off">
+                </div>
+            </div>
+            <div class="field-row">
+                <button onclick="solveLCS()">Build DP Table</button>
+            </div>
+            <div class="note-box">LCS uses dynamic programming to fill a matrix of subproblems, then backtracks one optimal answer from the finished table.</div>
+        </div>
+        <div id="lcsResult" class="algo-panel">
+            <p class="empty-state">Enter two strings and build the DP table.</p>
+        </div>
+    `;
+    solveLCS();
+}
+
+function solveLCS() {
+    const result = document.getElementById("lcsResult");
+    const first = document.getElementById("lcsFirst").value;
+    const second = document.getElementById("lcsSecond").value;
+
+    if (!first || !second) {
+        result.innerHTML = "<p class='empty-state'>Both strings are required.</p>";
+        return;
+    }
+
+    const rows = first.length + 1;
+    const cols = second.length + 1;
+    const dp = Array.from({ length: rows }, () => Array(cols).fill(0));
+
+    for (let i = 1; i < rows; i++) {
+        for (let j = 1; j < cols; j++) {
+            if (first[i - 1] === second[j - 1]) {
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            } else {
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
+    }
+
+    const trace = new Set();
+    const lcsChars = [];
+    let i = first.length;
+    let j = second.length;
+
+    trace.add(`${i}-${j}`);
+    while (i > 0 && j > 0) {
+        trace.add(`${i}-${j}`);
+        if (first[i - 1] === second[j - 1]) {
+            lcsChars.push(first[i - 1]);
+            i--;
+            j--;
+        } else if (dp[i - 1][j] >= dp[i][j - 1]) {
+            i--;
+        } else {
+            j--;
+        }
+    }
+
+    while (i >= 0 && j >= 0) {
+        trace.add(`${i}-${j}`);
+        if (i === 0 && j === 0) break;
+        if (i > 0) i--;
+        else j--;
+    }
+
+    renderLCS(first, second, dp, trace, lcsChars.reverse().join(""));
+}
+
+function renderLCS(first, second, dp, trace, lcs) {
+    const result = document.getElementById("lcsResult");
+    const lcsOutput = lcs ? escapeHTML(lcs) : "&empty;";
+    let tableHTML = `
+        <div class="table-wrap">
+            <table class="dp-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>&empty;</th>
+                        ${[...second].map(char => `<th>${escapeHTML(char)}</th>`).join("")}
+                    </tr>
+                </thead>
+                <tbody>
+    `;
+
+    for (let i = 0; i < dp.length; i++) {
+        const rowLabel = i === 0 ? "&empty;" : escapeHTML(first[i - 1]);
+        tableHTML += `<tr><th>${rowLabel}</th>`;
+        for (let j = 0; j < dp[i].length; j++) {
+            const key = `${i}-${j}`;
+            const classes = [];
+            if (trace.has(key)) classes.push("trace-cell");
+            if (i > 0 && j > 0 && first[i - 1] === second[j - 1]) classes.push("match-cell");
+            tableHTML += `<td class="${classes.join(" ")}">${dp[i][j]}</td>`;
+        }
+        tableHTML += "</tr>";
+    }
+
+    tableHTML += `
+                </tbody>
+            </table>
+        </div>
+    `;
+
+    result.innerHTML = `
+        <span class="badge">Dynamic Programming</span>
+        <h2 class="algo-title">Longest Common Subsequence</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">LCS String</div>
+                <div class="stat-value">${lcsOutput}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">LCS Length</div>
+                <div class="stat-value">${dp[first.length][second.length]}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">DP Table Size</div>
+                <div class="stat-value">${dp.length} x ${dp[0].length}</div>
+            </div>
+        </div>
+        <div class="note-box">Pink cells mark the backtracking route used to recover one optimal subsequence from the DP table.</div>
+        ${tableHTML}
+    `;
+}
+
+function initFractionalKnapsack() {
+    document.getElementById("container").innerHTML = `
+        <div class="controls">
+            <div class="field-row">
+                <div class="input-block">
+                    <label for="fkCapacity">Capacity</label>
+                    <input id="fkCapacity" type="number" min="0.1" step="0.1" value="50">
+                </div>
+                <div class="input-block" style="flex: 2 1 360px; min-width: 280px;">
+                    <label for="fkItems">Items (value,weight per line)</label>
+                    <textarea id="fkItems">60,10
+100,20
+120,30</textarea>
+                </div>
+            </div>
+            <div class="field-row">
+                <button onclick="solveFractionalKnapsack()">Solve Knapsack</button>
+            </div>
+            <div class="note-box">Fractional Knapsack is not a DP problem. The optimal solution comes from a greedy choice based on the highest value-to-weight ratio.</div>
+        </div>
+        <div id="fkResult" class="algo-panel">
+            <p class="empty-state">Enter capacity and items to compute the optimal profit.</p>
+        </div>
+    `;
+    solveFractionalKnapsack();
+}
+
+function solveFractionalKnapsack() {
+    const result = document.getElementById("fkResult");
+    const capacity = Number(document.getElementById("fkCapacity").value);
+    const lines = document.getElementById("fkItems").value
+        .split(/\r?\n/)
+        .map(line => line.trim())
+        .filter(Boolean);
+
+    if (!Number.isFinite(capacity) || capacity <= 0) {
+        result.innerHTML = "<p class='empty-state'>Capacity must be a positive number.</p>";
+        return;
+    }
+
+    if (!lines.length) {
+        result.innerHTML = "<p class='empty-state'>Add at least one item in value,weight format.</p>";
+        return;
+    }
+
+    const items = [];
+    for (let index = 0; index < lines.length; index++) {
+        const parts = lines[index].split(/[,\s]+/).filter(Boolean);
+        if (parts.length !== 2) {
+            result.innerHTML = `<p class='empty-state'>Line ${index + 1} is invalid. Use value,weight format.</p>`;
+            return;
+        }
+
+        const value = Number(parts[0]);
+        const weight = Number(parts[1]);
+        if (!Number.isFinite(value) || !Number.isFinite(weight) || value < 0 || weight <= 0) {
+            result.innerHTML = `<p class='empty-state'>Line ${index + 1} must contain valid numbers, and weight must be greater than 0.</p>`;
+            return;
+        }
+
+        items.push({
+            id: index + 1,
+            value,
+            weight,
+            ratio: value / weight
+        });
+    }
+
+    const sortedItems = [...items].sort((a, b) => b.ratio - a.ratio || a.weight - b.weight);
+    let remaining = capacity;
+    let totalProfit = 0;
+
+    const plan = sortedItems.map(item => {
+        const takenWeight = remaining > 0 ? Math.min(item.weight, remaining) : 0;
+        const fraction = takenWeight / item.weight;
+        const profit = takenWeight * item.ratio;
+        remaining -= takenWeight;
+        totalProfit += profit;
+
+        return {
+            ...item,
+            takenWeight,
+            fraction,
+            profit
+        };
+    });
+
+    renderFractionalKnapsack(capacity, plan, totalProfit, capacity - remaining, remaining);
+}
+
+function renderFractionalKnapsack(capacity, plan, totalProfit, usedCapacity, remainingCapacity) {
+    const result = document.getElementById("fkResult");
+    const selectedItems = plan.filter(item => item.fraction > 0).length;
+    const cards = plan.map(item => {
+        let stateClass = "take-none";
+        let stateText = "Skipped";
+
+        if (item.fraction === 1) {
+            stateClass = "take-full";
+            stateText = "Take 100%";
+        } else if (item.fraction > 0) {
+            stateClass = "take-partial";
+            stateText = `Take ${formatNumber(item.fraction * 100)}%`;
+        }
+
+        return `
+            <div class="item-card ${stateClass}">
+                <h3>Item ${item.id}</h3>
+                <p><strong>Value:</strong> ${formatNumber(item.value)}</p>
+                <p><strong>Weight:</strong> ${formatNumber(item.weight)}</p>
+                <p><strong>Ratio:</strong> ${formatNumber(item.ratio)}</p>
+                <p><strong>Decision:</strong> ${stateText}</p>
+                <p><strong>Weight Used:</strong> ${formatNumber(item.takenWeight)}</p>
+                <p><strong>Profit Added:</strong> ${formatNumber(item.profit)}</p>
+            </div>
+        `;
+    }).join("");
+
+    result.innerHTML = `
+        <span class="badge">Greedy Optimization</span>
+        <h2 class="algo-title">Fractional Knapsack</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Maximum Profit</div>
+                <div class="stat-value">${formatNumber(totalProfit)}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Capacity Used</div>
+                <div class="stat-value">${formatNumber(usedCapacity)} / ${formatNumber(capacity)}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Chosen Items</div>
+                <div class="stat-value">${selectedItems}</div>
+            </div>
+        </div>
+        <div class="note-box">Items are sorted by value/weight ratio from highest to lowest. The first partial card is where the bag becomes full. Remaining capacity: ${formatNumber(remainingCapacity)}.</div>
+        <div class="item-grid">${cards}</div>
+    `;
+}
 
 function initStack() {
     stack = [];
