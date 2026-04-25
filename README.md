@@ -25,10 +25,22 @@ It lets you visualize **Linked Lists, Stacks, and Queues** with smooth animation
   - Enqueue, Dequeue, Clear  
   - **FRONT** and **REAR** tags  
 
+- 🧮 **Dynamic Programming Visualizer**
+  - **Longest Common Subsequence (LCS)**
+    - Interactive DP table visualization
+    - Trace the optimal path with highlighted cells
+    - Shows LCS string, length, and table dimensions
+  - **Fractional Knapsack**
+    - Greedy algorithm optimization
+    - Real-time calculation of maximum profit
+    - Item cards show value, weight, ratio, and decisions
+    - Visual representation of items taken (full/partial/skipped)
+
 - 🎨 **Modern UI**
   - Neon gradient theme  
   - Glassmorphism-style cards  
-  - Smooth transitions and glowing effects  
+  - Smooth transitions and glowing effects
+  - Interactive stat cards with real-time calculations  
 
 ---
 
@@ -64,7 +76,9 @@ Choose Data Structure from the dropdown:
 
 -Queue
 
-Linked List
+-Dynamic Programming
+
+**Linked List**
 
 -Select type: Singly / Doubly / Circular
 
@@ -76,7 +90,7 @@ Linked List
 
 Clear Highlight – removes glow effect
 
-Stack
+**Stack**
 
 -Push – add element
 
@@ -84,7 +98,7 @@ Stack
 
 -Clear – empty the stack
 
-Queue
+**Queue**
 
 -Select: Linear Queue or Circular Queue
 
@@ -93,6 +107,20 @@ Queue
 -Dequeue – remove element from front
 
 -Clear – empty the queue
+
+**Dynamic Programming**
+
+-**Longest Common Subsequence (LCS)**
+  - Enter two strings
+  - Click "Build DP Table" to visualize the computation
+  - View the DP matrix with trace highlighting
+  - See the resulting LCS string and its length
+
+-**Fractional Knapsack**
+  - Set the knapsack capacity
+  - Enter items in `value,weight` format (one per line)
+  - Click "Solve Knapsack" to compute the optimal solution
+  - View profit cards showing which items are taken (full/partial/skipped)
 
 💡 Future Improvements
 
